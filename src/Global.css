@@ -1,0 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Alegreya&family=Alfa+Slab+One&family=Barlow&family=Carter+One&family=Lato&family=Monoton&family=Montserrat:wght@500&family=Orbitron:wght@500&family=Oswald:wght@300&family=Philosopher:ital@1&family=Rubik+Dirt&family=Secular+One&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  background: #efefef;
+  font-family: "Lato", sans-serif;
+}
+
+.active{
+  background-color: #6739b7;
+  color: #fff !important;
+  border: 1px solid   #6739b7;
+}

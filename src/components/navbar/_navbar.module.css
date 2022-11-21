@@ -1,0 +1,52 @@
+#navbarBlock {
+  background-color: #fff;
+  height: 70px;
+  width: 100%;
+}
+#navbarBlock > article {
+  display: flex;
+  width: 90%;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: space-between;
+  height: inherit;
+}
+#navbarBlock > article.logoBlock,a {
+  color: #6739b7;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: capitalize;
+  letter-spacing: 1.4px;
+  text-decoration: none;
+}
+
+.icon {
+  color: deeppink;
+  font-size: 30px;
+  font-weight: 900;
+  display: inline-block;
+  margin: 0px 5px;
+}
+.menuBlock ul{
+      list-style: none;
+      display: flex;
+      align-items: center;
+}
+.menuBlock ul li a {
+  color: #6739b7;
+  font-weight: 900;
+  text-transform: capitalize;
+  letter-spacing: 1.4px;
+  text-decoration: none;
+  display: inline-block;
+  margin: 0 6px;
+  font-size: 14px;
+  border: 1px solid #6739b7;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+.menuBlock ul li a:hover{
+      background-color: #6739b7;
+      color: #fff;
+      border: 1px solid #6739b7;
+}

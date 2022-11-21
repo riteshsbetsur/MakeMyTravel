@@ -1,0 +1,14 @@
+Any-application
+
+Front-end==> html,css,js,react js---context API
+
+Back-end as a service GOOGLE FIREBASE (BASS-- Backend ...)
+fireBase =>
+Authentication and authorization
+realtime database
+fireStore
+cloud functions
+deployment ==> host your application on cloud or remote servers
+
+
+database=>firebase (realtime database or fireStore
