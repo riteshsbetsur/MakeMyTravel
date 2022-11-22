@@ -2,10 +2,11 @@ import React,{useState} from "react";
 import Styles from "./_auth.module.css";
 import { useNavigate } from "react-router-dom";
 import Auth_Image from "./authAssets/Register-auth.jpg"
-import { toast } from "react-toastify";
+// import { toast } from "react-toastify";
 import {auth} from "../../apis/Firebase";
 //built-in firebase function for authentication
-import { createUserWithEmailAndPassword } from "firebase/auth";
+import { createUserWithEmailAndPassword, sendEmailVerification, updateProfile } from "firebase/auth";
+import md5 from 'md5';
 
 const Register = () => {
   let navigate = useNavigate();
@@ -33,17 +34,25 @@ const Register = () => {
         setState(isLoading=true)
 
         let userData = await createUserWithEmailAndPassword(auth, email, password);
+        sendEmailVerification(userData.user);
+        let message = `Email verification has been sent to ${email} address please verify...`;
+
+        updateProfile(userData.user, {
+          displayName: username,
+          photoURL: `https://www.gravatar.com/avatar/${md5(email)}?q=identicon`,
+        });
+
+        // toast.success(message);
+        window.alert(message);
         navigate("/login");
-        // toast.success("Registered Successfully");
-        window.alert("Registered Successfully");
 
       }
       console.log(state);
     }
     catch (error) {
-      console.log(error);
+      console.log(error.code);
     }
-//!resetting form fields after submission
+//! resetting form fields after submission
     setState({
       username: "",
       email: "",
