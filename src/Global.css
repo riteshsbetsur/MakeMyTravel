@@ -1,5 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Alegreya&family=Alfa+Slab+One&family=Barlow&family=Carter+One&family=Lato&family=Monoton&family=Montserrat:wght@500&family=Orbitron:wght@500&family=Oswald:wght@300&family=Philosopher:ital@1&family=Rubik+Dirt&family=Secular+One&display=swap");
 
+:root{
+  --base-color:#6739b7;
+}
 * {
   box-sizing: border-box;
   padding: 0;
@@ -11,7 +14,28 @@ body {
 }
 
 .active{
-  background-color: #6739b7;
+  background-color: #6739b7 !important;
   color: #fff !important;
-  border: 1px solid   #6739b7;
+  border: 1px solid   #6739b7 !important;
 }
+
+/* Spinner Block */
+#spinnerBlock{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+#spinnerBlock svg{
+  width: 100px;
+  overflow: visible;
+}
+
+#spinnerBlock svg circle{
+  stroke: var(--base-color);
+  transform-origin: 50px 50px;
+  animation: spin 1.2s linear infinite;
+}
+
+

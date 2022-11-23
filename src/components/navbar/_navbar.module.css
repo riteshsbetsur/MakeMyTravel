@@ -2,6 +2,7 @@
   background-color: #fff;
   height: 70px;
   width: 100%;
+  box-shadow: 1px 0px 3px black;
 }
 #navbarBlock > article {
   display: flex;

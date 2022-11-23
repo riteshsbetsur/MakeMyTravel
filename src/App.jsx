@@ -10,6 +10,9 @@ import PublicRoute from "./routes/PublicRoute";
 // import { ToastContainer } from "react-toastify";
 // import "react-toastify/dist/ReactToastify.css"
 import ProtectedRoute from "./routes/ProtectedRoute";
+import Profile from './components/profile/Profile';
+import UploadPhoto from './components/profile/UploadPhoto';
+import ProfileDefault from './components/profile/ProfileDefault';
 
 const App = () => {
   return (
@@ -42,6 +45,31 @@ const App = () => {
               </PublicRoute>
             }
           />
+          <Route
+            path="/profile"
+            element={
+              <ProtectedRoute>
+                <Profile />
+              </ProtectedRoute>
+            }
+          >
+            <Route
+              index
+              element={
+                <ProtectedRoute>
+                  <ProfileDefault />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="update-profile-photo"
+              element={
+                <ProtectedRoute>
+                  <UploadPhoto />
+                </ProtectedRoute>
+              }
+            />
+          </Route>
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Router>
