@@ -24,8 +24,8 @@ const ProfileSidebar = () => {
             </NavLink>
           </li>
           <li>
-            <NavLink to="/update-phone-number" activeClassName="active">
-              Update Phone Number
+            <NavLink to="/profile/add-profile" activeClassName="active">
+              Update Profile Details
             </NavLink>
           </li>
         </ul>

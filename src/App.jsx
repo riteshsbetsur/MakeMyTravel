@@ -7,33 +7,101 @@ import Register from "./components/auth/Register";
 import NotFound from "./pages/NotFound";
 import AuthProvider from "./apis/AuthContextApi";
 import PublicRoute from "./routes/PublicRoute";
-// import { ToastContainer } from "react-toastify";
-// import "react-toastify/dist/ReactToastify.css"
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import ProtectedRoute from "./routes/ProtectedRoute";
-import Profile from './components/profile/Profile';
-import UploadPhoto from './components/profile/UploadPhoto';
-import ProfileDefault from './components/profile/ProfileDefault';
+import Profile from "./components/profile/Profile";
+import UploadPhoto from "./components/profile/UploadPhoto";
+import ProfileDefault from "./components/profile/ProfileDefault";
+import ResetPassword from "./components/auth/ResetPassword";
+import PhoneAuth from "./components/auth/PhoneAuth";
+import AddProfileData from "./components/profile/AddProfileData";
+import Admin from "./components/admin/Admin";
+import AddHotel from "./pages/displayPages/AddHotel";
+import AdminRoute from "./routes/AdminRoute";
+import Users from "./components/admin/Users";
+import AdminPanelContainer from './components/admin/AdminPanelContainer';
+import UserDetails from './components/admin/UserDetails';
 
 const App = () => {
   return (
     <AuthProvider>
       <Router>
         <Navbar />
-        {/* <ToastContainer theme="dark"/> */}
+        <ToastContainer theme="dark" />
         <Routes>
+          <Route path="/" element={<Home />} />
           <Route
-            path="/"
+            path="/admin"
+            element={
+              <AdminRoute>
+                <Admin />
+              </AdminRoute>
+            }
+          >
+            <Route
+              index
+              element={
+                <AdminRoute>
+                  <AdminPanelContainer />
+                </AdminRoute>
+              }
+            />
+            <Route
+              path="users"
+              element={
+                <AdminRoute>
+                  <Users />
+                </AdminRoute>
+              }
+            />
+            <Route
+              path=":id"
+              element={
+                <AdminRoute>
+                  <UserDetails />
+                </AdminRoute>
+              }
+            />
+            <Route
+              path="add-hotel"
+              element={
+                <AdminRoute>
+                  <AddHotel />
+                </AdminRoute>
+              }
+            />
+          </Route>
+          <Route
+            path="/add-hotel"
             element={
               <ProtectedRoute>
-                <Home />
+                <AddHotel />
               </ProtectedRoute>
             }
           />
+
           <Route
             path="/login"
             element={
               <PublicRoute>
                 <Login />
+              </PublicRoute>
+            }
+          />
+          <Route
+            path="/reset-password"
+            element={
+              <PublicRoute>
+                <ResetPassword />
+              </PublicRoute>
+            }
+          />
+          <Route
+            path="/phone-auth"
+            element={
+              <PublicRoute>
+                <PhoneAuth />
               </PublicRoute>
             }
           />
@@ -66,6 +134,14 @@ const App = () => {
               element={
                 <ProtectedRoute>
                   <UploadPhoto />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="add-profile"
+              element={
+                <ProtectedRoute>
+                  <AddProfileData />
                 </ProtectedRoute>
               }
             />

@@ -1,0 +1,221 @@
+#adminPanel{
+      width: 100%;
+      background-color: #eee;
+}
+
+#adminPanel > article {
+      display: flex;
+      height: 100vh;
+      border-top: 2px solid #eee ;
+}
+.adminSidebar{
+      background-color: #fff;
+      padding: 20px;
+      flex-basis: 20%;
+}
+
+.adminMain{
+      background-color: #f0f4f7;
+      padding: 20px;
+      flex-basis: 80%;
+}
+
+.adminSidebar nav a, .adminSidebar main a{
+justify-content: start;
+text-decoration: none;
+display: flex;
+gap: 10px;
+height: 30px;
+color: #3f51b5;
+align-items: center;
+font-weight: 100;
+padding: 21px 10px;
+font-size: 16px;
+
+}
+
+.icons{
+      font-size: 20px;
+      position: relative;
+      top: 2px;
+}
+
+.adminSidebar nav a:hover , .adminSidebar main a:hover{
+      border-radius: 5px;
+      background-color: #0821b1;
+      color: #eee;
+}
+
+
+.adminMain aside{
+      display: flex;
+}
+
+.card{
+      background-color: #ffff;
+      padding: 15px;
+      border-radius: 8px;
+      min-height: 100px;
+      flex-basis: 24%;
+      box-shadow: 1px 1px 3px 1px #efefef;
+}
+
+.card time{
+      font-size: 12px;
+      color: #999;
+      letter-spacing: 2.4px;
+}
+
+.card h2{
+      text-transform: uppercase;
+      color: #0821b1;
+      font-weight: 600;
+      font-size: 17px;
+      padding: 5px 0px 5px;
+      margin: 5px 0;
+      border-bottom: 2px solid #efefef;
+      display: inline-block;
+      letter-spacing: 1px;
+}
+
+.card p{
+      text-transform: capitalize;
+      font-weight: 100;
+}
+
+.card p span:nth-child(2){
+      background: #4caf50;
+      border-radius: 100%;
+      height: 23px;
+      width: 23px;
+      display: flex;
+      text-align: center;
+      color: #fff;
+      margin: 0 5px;
+      font-size: 12px;
+      align-items: center;
+      justify-content: center;
+}
+
+.cardBody{
+      width: 100%;
+      display: flex;
+      gap: 20px;
+      padding: 10px;
+}
+
+.cardBody > div{
+flex-basis: 24%;
+background: #fff;
+padding: 10px;
+box-shadow: 1px 1px 1px 1px #efefef;
+border-radius: 5px;
+min-height: 200px;
+}
+
+.cardBody img{
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      /* border-radius: 5px; */
+      /* border-bottom: 1px solid rgba(128, 128, 128, 0.55); */
+      padding-bottom: 8px;
+}
+
+.cardBody p{
+      padding: 5px 0;
+      font-weight: 100;
+}
+
+.cardBody a {
+      width: 100%;
+      background-color: #00d0a1;
+      color: #fff;
+      padding: 7px;
+      display: block;
+      margin: 10px 0;
+      text-decoration: none;
+      text-align: center;
+      border-radius: 5px;
+      border-bottom: 2px solid #279086;
+      font-weight: 100;
+      text-transform: capitalize;
+      font-size: 14px;
+}
+
+.cardBody a:hover{
+background-color: #279086;
+
+}
+.addressBlock{
+      min-height: 110px;
+}
+.userBlock figure main h2{
+font-size: 18px;
+text-transform: capitalize;
+}
+/* ! Ranjan */
+/* .userDetails>article {
+    display: flex;
+    padding: 10px 10px;
+    height: 70vh;
+}
+
+.userPhoto {
+    flex-basis: 30%;
+    background: #efefef;
+}
+
+.userPhoto img {
+    width: 100%;
+    border-radius: 1px;
+    height: 30vh;
+}
+
+.userDescription {
+    flex-basis: 70%;
+    background: #fff;
+    padding: 0px 20px;
+}
+
+.userDescription h1 {
+    font-size: 3em;
+    font-weight: bold;
+    padding: 20px 0;
+    text-transform: uppercase;
+    color: #0c25b0;
+}
+
+ul {
+    list-style: none;
+}
+
+ul li {
+    padding: 10px 0;
+    font-size: 15px;
+    font-weight: 100;
+} */
+
+/* ! */
+
+/* ADD HOTEL */
+.adminMain h2{
+padding: 10px 0;
+text-transform: uppercase;
+font-weight: 600;
+letter-spacing: 1.4px;
+color: #607d8b;
+border-bottom: 1px solid #607d8b1f;
+margin: 10px 0 20px;
+}
+
+.adminMain form{
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      position: relative;
+}
+
+.adminMain form div{
+flex-basis: 24%;
+}

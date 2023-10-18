@@ -4,7 +4,7 @@ import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
 import { Link, useNavigate, useRouteLoaderData } from "react-router-dom";
 import { auth } from "../../apis/Firebase";
 import { signInWithEmailAndPassword } from "firebase/auth";
-// import { toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 
 const Login = () => {
   let navigate = useNavigate();
@@ -26,15 +26,15 @@ const Login = () => {
       let userData = await signInWithEmailAndPassword(auth, email, password);
       if (userData.user.emailVerified === true) {
         navigate("/");
-        // toast.success(`Successfully ${email} logged in`);
-        window.alert(`Successfully ${email} logged in`);
+        toast.success(`Successfully ${email} logged in`);
+        // window.alert(`Successfully ${email} logged in`);
       } else {
-        // toast.error("Email not yet verified");
-        window.alert("Email not verified");
+        toast.error("Email not yet verified");
+        // window.alert("Email not verified");
       }
     } catch (error) {
-      // toast.error(error.code);
-      window.alert(error.code);
+      toast.error(error.code);
+      // window.alert(error.code);
     }
     setEmail("");
     setPassword("");
@@ -45,6 +45,7 @@ const Login = () => {
       <article>
         <div className="container">
           <h1>Login</h1>
+          <Link to="/phone-auth" className={Styles.phoneAuth}>Login with Phone Number</Link>
           <form onSubmit={handleSubmit}>
             <div className="form-group">
               <label htmlFor="email">Email</label>

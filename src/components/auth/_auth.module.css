@@ -186,3 +186,23 @@
   padding: 10px 0;
   font-size: 13px;
 }
+
+.phoneAuth{
+  padding: 10px;
+  background: #6739b7;
+  text-transform: capitalize;
+  color: #fff;
+  text-decoration: none;
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+  margin: 11px auto;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: normal;
+}
+
+.phoneAuth:hover{
+  background-color: #33067f;
+  color: #fff;
+}

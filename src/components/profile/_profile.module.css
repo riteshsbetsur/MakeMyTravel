@@ -50,7 +50,7 @@
   letter-spacing: 1.2px;
 }
 
-.mainProfileBlock aside main h4 {
+.mainProfileBlock  h4 {
   font-size: 16px;
   color: #555;
   letter-spacing: 1.5px;
@@ -146,7 +146,7 @@
   margin: 5px 0;
   border-radius: 4px;
 }
-.profilePhotoBlock form button {
+.profilePhotoBlock form button, .profileForm button {
   background-color: #6739b7;
   color: #fff;
   border: 1px solid #6739b7;
@@ -161,7 +161,7 @@
   cursor: pointer;
 }
 
-.profilePhotoBlock form button:hover {
+.profilePhotoBlock form button:hover, .profileForm button:hover {
   background-color: #9c27b0;
   color: #eee;
   border: 1px solid #9c27b0;
@@ -173,6 +173,59 @@
   border-radius: 100%;
 }
 
-.progress{
+.progress {
+    width: 99%;
+    /* background-color: #4caf50; */
+    color: #fff;
+    padding: 10px;
+    margin: 13px;
+    display: block;
+    border-radius: 3px;
+    border: 1px solid #8bc34a;
+}
 
+.profileForm{
+  padding: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.profileForm div{
+  flex-basis: 24%;
+  padding: 10px;
+  background-color: #fff;
+}
+
+#textArea{
+  flex-basis: 100%;
+}
+
+.profileForm div label{
+  width: 100%;
+  display: block;
+  padding: 5px;
+  color: #111;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.profileForm div input[type="text"], .profileForm div textarea{
+width: 100%;
+padding: 10px;
+border: 1px solid #ccc;
+border-radius: 5px;
+}
+
+.profileForm div  span{
+  padding: 5px 10px;
+  color: #111;
+  margin: 2px 4px;
+  display: inline-flex;
+  background: #eee;
+  border-radius: 5px;
+}
+
+.profileForm div input[type="radio"]{
+  margin: 0;
 }
